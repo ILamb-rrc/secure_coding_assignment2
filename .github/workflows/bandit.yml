@@ -1,0 +1,15 @@
+name: Bandit
+
+on:
+  # trigger on pushes to main branch
+  push:
+    branches: [main]
+  # trigger on opening of a pull request to a main branch without merge conflicts
+  pull_request:
+    branches: [main]
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
