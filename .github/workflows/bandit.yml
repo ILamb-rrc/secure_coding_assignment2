@@ -13,3 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       security-events: write
+    steps:
+      - name: Perform Bandit Analysis
+        uses: shundor/python-bandit-scan@v1.0
+        with: 
+            path: "."
+            level: high
+            confidence: high
+            exit_zero: true 
+      
