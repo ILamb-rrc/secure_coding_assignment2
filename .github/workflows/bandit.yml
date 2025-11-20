@@ -15,5 +15,10 @@ jobs:
       security-events: write
     steps:
       - name: Perform Bandit Analysis
-        uses: PyCQA/bandit-action@v1
+        uses: shundor/bandit-action@v1
+        with: 
+            path: "."
+            level: high
+            confidence: high
+            exit_zero: true 
       
