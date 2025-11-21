@@ -34,7 +34,7 @@ def save_to_db(data):
     cursor.close()
     connection.close()
 
-
+"""Here is a docstring"""
 if __name__ == '__main__':
     user_input = get_user_input()
     data = get_data()
